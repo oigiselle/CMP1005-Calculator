@@ -9,7 +9,6 @@ namespace Calculator_tests
 
 
     {
-      
 
         //check if the application can add 2 positive numbers
         [TestMethod]
@@ -253,12 +252,94 @@ namespace Calculator_tests
             Assert.AreEqual(-1, result);
         }
 
+
+        // testing if the thrown exception is running properly
         [TestMethod]
         public void CalculatorThowsExceptionWhenDividingByZero()
         {
 
             Assert.ThrowsException<DivideByZeroException>(() => { Calculator.Div(9, 0); });
         }
+
+        //check if the application can divide 2 positive integers
+        [TestMethod]
+        public void CalculatorCanDivTwoPositiveIntegers()
+        {
+            double result = Calculator.Div(4, 2);
+            Assert.AreEqual(2, result);
+        }
+
+        //check if the application can divide a positive double by a negative integer
+        [TestMethod]
+        public void CalculatorCanDivPositiveDoublebyNegativeInteger()
+        {
+            double result = Calculator.Div(5, -2.5);
+            Assert.AreEqual(-2, result);
+        }
+        //check if the application can divide 2 rational numbers
+        [TestMethod]
+        public void CalculatorCanDivTwoRationalNumbers()
+        {
+            double result = Calculator.Div(7.5, 2.5);
+            Assert.AreEqual(3, result);
+        }
+
+        //check if the application divide add 2 irrational numbers
+        [TestMethod]
+        public void CalculatorCanDivTwoPositiveIrrationalNumbers()
+        {
+            double result = Calculator.Div(Math.PI, Math.PI);
+            Assert.AreEqual(Math.PI / Math.PI, result);
+        }
+
+        //check if the application can divide zero by a integer
+        [TestMethod]
+        public void CalculatorCanDivZeroByInteger()
+        {
+            double result = Calculator.Div(0, 1);
+            Assert.AreEqual(0, result);
+        }
+
+        //check if the application can divide 2 negative integers
+        [TestMethod]
+        public void CalculatorCanDivideTwoNegativeIntegers()
+        {
+            double result = Calculator.Div(-4, -2);
+            Assert.AreEqual(2, result);
+        }
+
+        //check if the application can divide 2 negative rational numbers
+        [TestMethod]
+        public void CalculatorCanDivTwoNegativeRationalNumbers()
+        {
+            double result = Calculator.Div(-7.5, -2.5);
+            Assert.AreEqual(3, result);
+        }
+
+        //check if the application can divide 2 negative irrational numbers
+        [TestMethod]
+        public void CalculatorCanDivNegativeIrrationalNumbers()
+        {
+            double result = Calculator.Div(-Math.PI, -Math.PI);
+            Assert.AreEqual(-Math.PI / -Math.PI, result);
+        }
+
+        //check if the application can divide a positive integer in the left by a negative integer
+        [TestMethod]
+        public void CalculatorCanDivLeftPositiveByRightNegativeIntegers()
+        {
+            double result = Calculator.Div(4, -2);
+            Assert.AreEqual(-2, result);
+        }
+
+        //check if the application can divide negative integer in the left by a positive integer
+        [TestMethod]
+        public void CalculatorCanDivLeftNegativeByRightPositiveIntegers()
+        {
+            double result = Calculator.Add(-4, 2);
+            Assert.AreEqual(-2, result);
+        }
+
 
     }
 }
