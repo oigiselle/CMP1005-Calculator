@@ -6,7 +6,12 @@ namespace Calculator_tests
 {
     [TestClass]
     public class UnitTest1
+
+
     {
+      
+
+        //check if the application can add 2 positive numbers
         [TestMethod]
         public void CalculatorCanAddTwoPositiveIntegers()
         {
@@ -14,14 +19,14 @@ namespace Calculator_tests
             Assert.AreEqual(2,result);
         }
 
-
+        //check if the application can add a positive double and a negative integer
         [TestMethod]
         public void CalculatorCanAddPositiveDoubleAndNegativeInteger()
         {
-            double result = Calculator.Add(1.1, -2);
-            Assert.AreEqual(-1.1, result) ;
+            double result = Calculator.Add(1.1, -1.1);
+            Assert.AreEqual(0, result) ;
         }
-
+        //check if the application can add 2 rational numbers
         [TestMethod]
         public void CalculatorCanAddTwoRationalNumbers()
         {
@@ -29,6 +34,7 @@ namespace Calculator_tests
             Assert.AreEqual(2.2, result);
         }
 
+        //check if the application can add 2 irrational numbers
         [TestMethod]
         public void CalculatorCanAddTwoPositiveIrrationalNumbers()
         {
@@ -36,6 +42,7 @@ namespace Calculator_tests
             Assert.AreEqual(Math.PI * 2, result);
         }
 
+        //check if the application can add 2 zeros
         [TestMethod]
         public void CalculatorCanAddTwoZeros()
         {
@@ -43,6 +50,7 @@ namespace Calculator_tests
             Assert.AreEqual(0, result);
         }
 
+        //check if the application can add 2 negative integers
         [TestMethod]
         public void CalculatorCanAddTwoNegativeIntegers()
         {
@@ -50,6 +58,7 @@ namespace Calculator_tests
             Assert.AreEqual(- 2, result);
         }
 
+        //check if the application can add 2 negative rational numbers
         [TestMethod]
         public void CalculatorCanAddTwoNegativeRationalNumbers()
         {
@@ -57,6 +66,7 @@ namespace Calculator_tests
             Assert.AreEqual(-2.2, result);
         }
 
+        //check if the application can add 2 negative irrational numbers
         [TestMethod]
         public void CalculatorCanAddTwoNegativeIrrationalNumbers()
         {
@@ -64,6 +74,7 @@ namespace Calculator_tests
             Assert.AreEqual(-Math.PI * 2, result);
         }
 
+        //check if the application can add a positive integer in the left and a negative integer
         [TestMethod]
         public void CalculatorCanAddLeftPositiveAndRightNegativeIntegers()
         {
@@ -71,6 +82,7 @@ namespace Calculator_tests
             Assert.AreEqual(0, result);
         }
 
+        //check if the application can add negative integer in the left with a positive integer
         [TestMethod]
         public void CalculatorCanAddLeftNegativeAndRightPositiveIntegers()
         {
@@ -78,6 +90,7 @@ namespace Calculator_tests
             Assert.AreEqual(0, result);
         }
 
+        //check if the application can subtract 2 positive numbers
         [TestMethod]
         public void CalculatorCanSubTwoPositiveIntegers()
         {
@@ -85,7 +98,7 @@ namespace Calculator_tests
             Assert.AreEqual(1, result);
         }
 
-
+        //check if the application can add a positive double and a negative integer
         [TestMethod]
         public void CalculatorCanSubPositiveDoubleAndNegativeInteger()
         {
@@ -93,6 +106,7 @@ namespace Calculator_tests
             Assert.AreEqual(2.1, result);
         }
 
+        //check if the application can subtract 2 rational numbers
         [TestMethod]
         public void CalculatorCanSubTwoRationalNumbers()
         {
@@ -100,6 +114,7 @@ namespace Calculator_tests
             Assert.AreEqual(1.1, result);
         }
 
+        //check if the application can subtract 2 positive irrational numbers
         [TestMethod]
         public void CalculatorCanSubTwoPositiveIrrationalNumbers()
         {
@@ -107,6 +122,7 @@ namespace Calculator_tests
             Assert.AreEqual(Math.PI - Math.PI, result);
         }
 
+        //check if the application can subtract 2 zeros
         [TestMethod]
         public void CalculatorCanSubTwoZeros()
         {
@@ -114,6 +130,7 @@ namespace Calculator_tests
             Assert.AreEqual(0, result);
         }
 
+        //check if the application can sub 2 negative integers
         [TestMethod]
         public void CalculatorCanSubTwoNegativeIntegers()
         {
@@ -121,6 +138,7 @@ namespace Calculator_tests
             Assert.AreEqual(1, result);
         }
 
+        //check if the application can subtract 2 negative rational numbers
         [TestMethod]
         public void CalculatorCanSubTwoNegativeRationalNumbers()
         {
@@ -128,6 +146,7 @@ namespace Calculator_tests
             Assert.AreEqual(0, result);
         }
 
+        //check if the application can subtract 2 negative irrational numbers
         [TestMethod]
         public void CalculatorCanSubTwoNegativeIrrationalNumbers()
         {
@@ -135,6 +154,7 @@ namespace Calculator_tests
             Assert.AreEqual((-Math.PI) - (-Math.PI), result);
         }
 
+        //check if the application subtract a left positive with a right positive integer
         [TestMethod]
         public void CalculatorCanSubLeftPositiveAndRightNegativeIntegers()
         {
@@ -142,14 +162,15 @@ namespace Calculator_tests
             Assert.AreEqual(2, result);
         }
 
+        //check if the application can subtract negative in the left and positive integers in the right
         [TestMethod]
-        public void CalculatorSubAddLeftNegativeAndRightPositiveIntegers()
+        public void CalculatorSubLeftNegativeAndRightPositiveIntegers()
         {
             double result = Calculator.Sub(-1, 1);
             Assert.AreEqual(-2, result);
         }
 
-
+        //check if the application can multiply 2 positive integers
         [TestMethod]
         public void CalculatorCanMultiplyTwoPositiveIntegers()
         {
@@ -157,7 +178,7 @@ namespace Calculator_tests
             Assert.AreEqual(4, result);
         }
 
-
+        //check if the application can multiply a positive double by a negative integer
         [TestMethod]
         public void CalculatorCanMultiplyPositiveDoubleAndNegativeInteger()
         {
@@ -165,6 +186,7 @@ namespace Calculator_tests
             Assert.AreEqual(3, result);
         }
 
+        //check if the application can multiply 2 rational numbers
         [TestMethod]
         public void CalculatorCanMultiplyTwoRationalNumbers()
         {
@@ -172,12 +194,15 @@ namespace Calculator_tests
             Assert.AreEqual(3.75, result);
         }
 
+        //check if the application can multiply 2 irrational numbers
         [TestMethod]
         public void CalculatorCanMultiplyTwoPositiveIrrationalNumbers()
         {
             double result = Calculator.Mul(Math.PI, Math.PI);
             Assert.AreEqual(Math.PI * Math.PI, result);
         }
+
+        //check if the application can multiply 2 zeros
 
         [TestMethod]
         public void CalculatorCanMultiplyTwoZeros()
@@ -186,6 +211,7 @@ namespace Calculator_tests
             Assert.AreEqual(0, result);
         }
 
+        //check if the application can multiply 2 negative integers
         [TestMethod]
         public void CalculatorCanMultiplyTwoNegativeIntegers()
         {
@@ -193,6 +219,7 @@ namespace Calculator_tests
             Assert.AreEqual(6, result);
         }
 
+        //check if the application can multiply 2 negative rational numbers
         [TestMethod]
         public void CalculatorCanMultiplyTwoNegativeRationalNumbers()
         {
@@ -200,6 +227,7 @@ namespace Calculator_tests
             Assert.AreEqual(2.25, result);
         }
 
+        //check if the application can multiply 2 negative irrational numbers
         [TestMethod]
         public void CalculatorCanMultiplyTwoNegativeIrrationalNumbers()
         {
@@ -207,6 +235,8 @@ namespace Calculator_tests
             Assert.AreEqual((-Math.PI) * (-Math.PI), result);
         }
 
+
+        //check if the application can multiply a positive number in the left by a negative number in the right
         [TestMethod]
         public void CalculatorCanMultiplyLeftPositiveAndRightNegativeIntegers()
         {
@@ -214,11 +244,21 @@ namespace Calculator_tests
             Assert.AreEqual(-1, result);
         }
 
+
+        //check if the application can multiply a negative number in the left by a positive number in the right
         [TestMethod]
         public void CalculatorMultiplyAddLeftNegativeAndRightPositiveIntegers()
         {
             double result = Calculator.Mul(-1, 1);
             Assert.AreEqual(-1, result);
         }
+
+        [TestMethod]
+        public void CalculatorThowsExceptionWhenDividingByZero()
+        {
+
+            Assert.ThrowsException<DivideByZeroException>(() => { Calculator.Div(9, 0); });
+        }
+
     }
 }

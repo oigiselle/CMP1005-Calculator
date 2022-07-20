@@ -23,9 +23,17 @@ namespace Calculator_Logic
         }
 
         //Division operation, using 2 numbers and returning using the operator "/"
+        //with an exception if the right number is equal to 0
         public static double Div(double left, double right)
         {
-            return left / right;
+            if(right != 0)
+            {
+                return left / right;
+            }
+            else 
+            { 
+                throw new DivideByZeroException(); 
+            }
         }
 
 

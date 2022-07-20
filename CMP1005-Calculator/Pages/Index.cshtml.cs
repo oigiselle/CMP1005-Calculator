@@ -29,10 +29,20 @@ namespace CMP1005_Calculator.Pages
             switch (oper)
             {
                 case "mul":
+                    
                     ViewData["Output"] = Calculator.Mul(left, right);
+                
                     break;
                 case "div":
-                    ViewData["Output"] = Calculator.Div(left, right);
+                    if (right != 0)
+                    {
+                        ViewData["Output"] = Calculator.Div(left, right);
+                    }
+                    else
+                    {
+                        ViewData["Output"] = "Impossible to divide by zero";
+                    }
+                   
                     break;
                 case "sub":
                     ViewData["Output"] = Calculator.Sub(left, right);
