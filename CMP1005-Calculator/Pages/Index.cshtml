@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <label for="left">Left Number</label><input type="text" name="left" id="left" />
+    <label for="right">Right Number</label><input type="text" name="right" id="right" />
+    <fieldset>
+        <label><input type="radio" name="oper" value="add" id="oper"/>+</label>
+        <label><input type="radio" name="oper" value="sub" id="oper"/>-</label>
+        <label><input type="radio" name="oper" value="mul" id="oper"/>X</label>
+        <label><input type="radio" name="oper" value="div" id="oper"/>&divide;</label>
+
+    </fieldset>
+    <input type="submit" value="Calculate" /><br />
+    <label for="output">Output: &nbsp </label><output id="output">@ViewData["Output"]</output>
+    
+
+</form>
