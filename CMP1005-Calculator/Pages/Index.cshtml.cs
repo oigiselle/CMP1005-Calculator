@@ -23,11 +23,27 @@ namespace CMP1005_Calculator.Pages
 
         }
 
+        //creating the switch statement to process the correct operation
         public void OnPost([FromForm] double left, double right, string oper)
         {
-            ViewData["Output"] = Calculator.Add(left, right);
-            ViewData["Output"] = Calculator.Sub(left, right);
+            switch (oper)
+            {
+                case "mul":
+                    ViewData["Output"] = Calculator.Mul(left, right);
+                    break;
+                case "div":
+                    ViewData["Output"] = Calculator.Div(left, right);
+                    break;
+                case "sub":
+                    ViewData["Output"] = Calculator.Sub(left, right);
+                    break;
+                case "add":
+                    ViewData["Output"] = Calculator.Add(left, right);
+                    break;
 
+            }
         }
+
     }
 }
+
