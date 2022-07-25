@@ -36,6 +36,6 @@ namespace Calculator_Logic
             }
         }
 
-
+     
     }
 }
